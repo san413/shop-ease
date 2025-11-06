@@ -1,16 +1,17 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function App() {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
-      {/* Fixed Navbar */}
+      {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
-      <main className="flex flex-col flex-1 items-center justify-center text-center px-4">
+      {/* Main Content */}
+      <main className="flex flex-col flex-1 items-center justify-center text-center px-4 py-10">
         <h1 className="text-5xl md:text-6xl font-extrabold text-blue-600 drop-shadow-sm">
           ShopEase 🛍️
         </h1>
@@ -32,9 +33,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="text-center text-gray-500 py-6 text-sm">
-        © {new Date().getFullYear()} ShopEase. All rights reserved.
-      </footer>
+      <Footer />
     </div>
   );
 }
